@@ -181,7 +181,7 @@
   }
   
   .vip-benefits {
-    background: #fef9f9;
+    background: #21212250;
     padding: 4rem 2rem;
     font-family: 'Segoe UI', sans-serif;
   }
@@ -231,7 +231,7 @@
   }
   
   .benefit-label.red {
-    color: #ff4d4d;
+    color: #ff0000;
   }
   
   .benefit-label.green {
@@ -284,7 +284,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 6rem;
-    color: rgba(255, 77, 77, 0.08); /* merah muda transparan */
+    color: rgba(52, 151, 6, 0.781); /* merah muda transparan */
     font-weight: 900;
     z-index: 0;
     pointer-events: none;
@@ -294,5 +294,81 @@
   .card-no .benefit-list {
     position: relative;
     z-index: 1;
+  }
+  
+  .testimoni-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    padding: 1rem 0;
+    -webkit-overflow-scrolling: touch;
+    
+  }
+  
+  .testimoni-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimoni-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 1rem;
+  }
+  
+  .testimoni-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    padding: 1rem 0;
+    -webkit-overflow-scrolling: touch;
+    
+    /* Sembunyikan scrollbar di semua browser */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE & Edge */
+  }
+  
+  .testimoni-scroll-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+  
+  .testimoni-auto-scroll-wrapper {
+    overflow: hidden;
+    width: 100%;
+    background: #f9f9f9;
+    padding: 2rem 0;
+  }
+  
+  .testimoni-auto-scroll {
+    display: flex;
+    gap: 2rem;
+    animation: scrollLeft 30s linear infinite;
+    width: max-content;
+  }
+  
+  .testimoni-auto-scroll img {
+    height: 200px;
+    width: auto;
+    flex-shrink: 0;
+    border-radius: 1rem;
+  }
+  
+  /* Animasi scroll ke kiri */
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
   
